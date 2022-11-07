@@ -1,0 +1,24 @@
+@use './styles/partials/global' as *;
+@use './styles/partials/fonts' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/header' as *;
+@use './styles/partials/mainVid' as*;
+@use './styles/partials/nextVid' as*;
+
+.app__desktopDisplay{
+    @include desktop{
+        width: 80%;
+        margin: 5% auto 0;
+        display: flex;
+        justify-content: flex-start;
+
+    }
+}
+
+.vidAndCom{
+    @include desktop{
+        border-right: 2px solid #e1e1e1;
+        width: 60%;
+
+    }
+}
