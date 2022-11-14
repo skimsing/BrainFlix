@@ -1,5 +1,5 @@
 export default function MainVid({videoData, apiKey}){
-    const {image, video} = videoData
+    const {image, video} = videoData;
 
     return(
 

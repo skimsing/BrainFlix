@@ -5,6 +5,10 @@
 .upload{
     padding: 1rem;
 
+    @include desktop{
+        width: 80%;
+        margin: auto;
+    }
     &__heading{
         padding: 1rem 0;
     }
@@ -12,7 +16,11 @@
         @include tablet{
             padding: 1.5rem 0;
             border-top: 2px solid #e1e1e1;
-            border-bottom: 2px solid #e1e1e1;
+            // border-bottom: 2px solid #e1e1e1;
+        }
+        @include desktop{
+            display: flex;
+            flex-direction: row;
         }
     }
     &__thumbnail{
@@ -36,20 +44,33 @@
     &__formItem{
         @extend .upload__form;
         margin: 0.5rem 0;
+        @include tablet{
+            margin: 1rem 0;
+        }
     }
-    &__vidTitle{
+    &__vidTitle, &__vidDesc{
         color: #afafaf;
+        font-weight: 700;
+        text-transform: uppercase;
     }
-    &__vidDesc{
-        color: #afafaf;
+    &__titleInput, &__descriptionInput{
+        border: 2px solid #e1e1e1;
+        color: #323232;
+        background-color: #fafafa;
+        border-radius: 5px;
+        padding: 1rem;
+        font-family: inherit;
+
+
     }
     &__formButtons{
         display: flex;
         flex-direction: column;
-        margin: 1rem 0;
+        padding: 1rem 0;
         @include tablet{
             flex-direction: row;
             justify-content: flex-end;
+            border-top: 2px solid #e1e1e1;
         }
     }
     &__publishBtn{

@@ -10,7 +10,6 @@
     
     &__container{
         display: flex;
-        // flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-between;
         align-content: center;
@@ -30,10 +29,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // align-content: center;
-    //     @include tablet{
-    //         justify-content: baseline;
-    //     }
     }
     &__logoIcon{
         height: 2rem;
@@ -42,7 +37,6 @@
         width: 100%;
         @include tablet{
             display: flex;
-            // align-items: center;
             gap: 1rem;
         }
     }
@@ -50,8 +44,6 @@
         width: 100%;
         display: flex;
         margin: 1rem 0;
-        // flex-wrap: wrap;
-        // border-radius: 5px;
         justify-content: center;
         @include tablet{
             flex-direction: row;
@@ -108,28 +100,11 @@
     &__uploadBtn{
         @extend .addComment__btn;
         width: 100%;
-        // width: 90%;
         @include tablet{
             width: auto;
         }
-        // display: block;
-        
-        // background-color: #0095ff;
-        // border-style: none;
-        // color: #fff;
-        // border-radius: 5px;
-        // padding: 1rem 3rem;
-        // position: relative;
-        // gap: 50px;
-        // &:hover{
-        //     background-color: #0065ad;
-        // }
     }
     &__uploadIcon{
         @extend .addComment__btnIcon;
-        // position: absolute;
-        // left: 0.5rem;
-        // height: 1.27rem;
-        
     }
 }

@@ -26,7 +26,7 @@ export default function Upload(props){
 
                     <div className="upload__formItem">
                         <label className="upload__vidDesc">Add a Video Description</label>
-                        <textarea className="upload__descInput" placeholder='Add a description to your video'></textarea>
+                        <textarea className="upload__descriptionInput" placeholder='Add a description to your video'></textarea>
                     </div>
 
                     <div className='upload__formButtons'>

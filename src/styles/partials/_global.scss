@@ -32,7 +32,6 @@ body{
     }
 
     &__displayed{
-        // @extend .addComment__container;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -40,17 +39,17 @@ body{
         padding: 0.7rem 0;
         @include tablet{
             gap: 1rem;
-            // width: 80%;
             margin: auto;
             padding: 1rem;
             width: 100%;
             
         }
-        // @include desktop{
-        //     width: 100%;
-        // }
     }
 
+    &__count{
+        font-weight: 700;
+
+    }
     &__icon{
         @extend .addComment__icon;
         background-color: #afafaf;
@@ -67,17 +66,12 @@ body{
         flex-direction: row;
         justify-content: center;
         padding: 1rem 0;
-        // border-bottom: 2px solid #e1e1e1;
     }
     &__details{ 
-        // @extend .addComment__form;
         display: flex;
         justify-content: center;
         flex-direction: column;
         width: 80%;
-        // @include tablet{ 
-        //     flex-direction: row;
-        // }
     }
     &__label{
         display: flex;              
@@ -86,10 +80,8 @@ body{
     }
     &__name{
         font-weight: 600;
-        // margin: 0.5rem 0;
     }
     &__date{
-        // margin: 0.5rem 0;
         color: #afafaf;
     }
 }
@@ -103,7 +95,6 @@ body{
         margin: 1rem auto;
         gap: 1rem;
         @include desktop{
-            // width: 60%;
             width: 100%;
             margin: auto;
         }
@@ -117,15 +108,10 @@ body{
         border-bottom: 2px solid #e1e1e1;
         
         @include tablet{
-            // width: 80%;
             margin: auto;
             width: 100%;
             
         }
-        // @include desktop{
-        //     width: 100%;
-        // }
-
     }
     &__icon{
         height: 2.15rem;
@@ -143,19 +129,11 @@ body{
         font-weight: 600;
     }
     &__form{
-        // display: flex;
-        // justify-content: center;
-        // flex-direction: column;
         width: 80%;
-        // @include tablet{
-        //     flex-direction: row;
-        // }
     }
     &__commentWrapper{
         display:flex;
         flex-direction: column;
-        // flex-direction: row;
-
     }
     &__commentLabel{
         text-transform: uppercase;
@@ -173,7 +151,6 @@ body{
         font-family: inherit;
     }
     &__btn{
-        // @extend .header__uploadBtn;
         height: 3.5rem;
         text-transform: uppercase;
         background-color: #0095ff;
@@ -186,10 +163,8 @@ body{
         &:hover{
             background-color: #0065ad;
         }
-
     }
     &__btnIcon{
-        // @extend .header__uploadIcon;
         position: absolute;
         left: 0.5rem;
         height: 1.27rem;

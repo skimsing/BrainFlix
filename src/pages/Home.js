@@ -4,7 +4,7 @@ import axios from 'axios';
 
 //components
 import MainVid from "../components/MainVid";
-import VidAndCom from "../components/VidAndCom";
+import VidAndComments from "../components/VidAndComments";
 import NextVideo from "../components/NextVideo";
 
 export default function Home(){
@@ -52,7 +52,7 @@ export default function Home(){
         <>
             {video && <MainVid videoData={video} apiKey={apiKey}/>}
             <div className="app__desktopDisplay">
-                {video && <VidAndCom video={video}/>}
+                {video && <VidAndComments video={video}/>}
                 <NextVideo videos={nextVids}/>
             </div>
         </>

@@ -7,9 +7,6 @@
         background-color: black;
         @include tablet{
             padding: 0 5%;
-            // width: 90%;
-            // margin: auto;
-
         }
         @include desktop{
             padding: 0 10%;
@@ -24,9 +21,6 @@
     }
     &__infoContainer{
         margin: 1rem;
-    //     @include desktop{
-    //         width: 50%;
-    //     }
     }
     &__info{
         display: flex;
@@ -48,10 +42,6 @@
         justify-content: space-between;
         gap: 0.5rem;
     }
-    // &__viewIcon, &__likeIcon{
-        //     position: absolute;
-        //     left: -1.5rem;
-        // }
     &__author, &__date, &__views, &__likes{
         margin: 0.2rem;
 

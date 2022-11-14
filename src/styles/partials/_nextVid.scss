@@ -29,4 +29,14 @@
     &__vidTitle{
         font-weight: 700;
     }
+    &__vidChannel{
+        font-weight: 300;
+    }
+    &__vidLinks{
+        text-decoration: none;
+        color: #323232;
+        &:hover{
+            color: #0065ad;
+        }
+    }
 }
