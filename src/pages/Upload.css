@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Avenir-Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf"), url(../../assets/fonts/Alternative-files/AvenirNextLTPro.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf"), url(../../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+h1 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+p {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.upload {
+  padding: 1rem;
+}
+.upload__heading {
+  padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .upload__videoItems {
+    padding: 1.5rem 0;
+    border-top: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
+  }
+}
+.upload__thumbnail {
+  color: #afafaf;
+  font-weight: 700;
+}
+.upload__thumbnailImg {
+  max-width: 100%;
+  margin: auto;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .upload__thumbnailImg {
+    max-width: 50%;
+  }
+}
+.upload__form, .upload__formItem {
+  display: flex;
+  flex-direction: column;
+}
+.upload__formItem {
+  margin: 0.5rem 0;
+}
+.upload__vidTitle {
+  color: #afafaf;
+}
+.upload__vidDesc {
+  color: #afafaf;
+}
+.upload__formButtons {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .upload__formButtons {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+.upload__publishBtn {
+  height: 3.5rem;
+  text-transform: uppercase;
+  background-color: #0095ff;
+  border-style: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  position: relative;
+  gap: 50px;
+}
+.upload__publishBtn:hover {
+  background-color: #0065ad;
+}
+@media screen and (min-width: 768px) {
+  .upload__publishBtn {
+    order: 1;
+    margin: 0 1rem;
+  }
+}
+.upload__publishBtnIcon {
+  position: absolute;
+  left: 0.5rem;
+  height: 1.27rem;
+}
+.upload__cancelBtn {
+  text-transform: uppercase;
+  background-color: #fff;
+  border: none;
+  color: #0095ff;
+  padding: 1rem 3rem;
+}/*# sourceMappingURL=Upload.css.map */

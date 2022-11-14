@@ -4,11 +4,12 @@
 @use './styles/partials/header' as *;
 @use './styles/partials/mainVid' as*;
 @use './styles/partials/nextVid' as*;
+@use './pages/Upload' as*;
 
 .app__desktopDisplay{
     @include desktop{
         width: 80%;
-        margin: 5% auto 0;
+        margin: 2rem auto 0;
         display: flex;
         justify-content: flex-start;
 

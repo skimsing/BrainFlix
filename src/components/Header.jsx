@@ -4,6 +4,7 @@ import uploadIcon from '../assets/images/Icons/upload.svg';
 import searchIcon from '../assets/images/Icons/search.svg'
 
 
+import { Link } from 'react-router-dom';
 
 function Header(props) {
     
@@ -11,9 +12,11 @@ function Header(props) {
         <header className="header">
             <div className="header__container">
 
-                <div className="header__logo">
-                    <img className="header__logoIcon" src={logo} alt="brain-flix logo"></img>
-                </div>
+                <Link to="/">
+                    <div className="header__logo">
+                        <img className="header__logoIcon" src={logo} alt="brain-flix logo"></img>
+                    </div>
+                </Link>
 
                 <div className="header__contents">
 
@@ -28,12 +31,12 @@ function Header(props) {
                         </div>
                     </div>
 
-                    {/* <div className="header__upload"> */}
-                    <button className="header__uploadBtn">
-                        <img className='header__uploadIcon' src={uploadIcon}></img>
-                        Upload
-                    </button>
-                    {/* </div> */}
+                    <Link to="/upload">
+                        <button className="header__uploadBtn">
+                            <img className='header__uploadIcon' src={uploadIcon}></img>
+                            Upload
+                        </button>
+                    </Link>
                     
                     <div className="header__profile">
                         <img className="header__tabletProfileImg" src={iconImg} alt="profile image"/>

@@ -1,12 +1,6 @@
 @use './typography' as *;
 @use'./mixins' as *;
 
-// button{
-//     font-size: 1.2rem;
-//     @include tablet{
-//         font-size: 1rem;
-//     }
-// }
 h1{
     font-size: 2rem;
     @include tablet{

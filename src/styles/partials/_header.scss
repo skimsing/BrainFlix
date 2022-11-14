@@ -6,14 +6,14 @@
 .header{
     background-color: #fff;
     padding: 1rem;
+    border-bottom: 2px solid #e1e1e1;
     
     &__container{
         display: flex;
-        // flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-between;
         align-content: center;
-        align-content: center;
+        align-items: center;
         @include tablet{
             width: 90%;
             margin: auto;
@@ -29,10 +29,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // align-content: center;
-    //     @include tablet{
-    //         justify-content: baseline;
-    //     }
     }
     &__logoIcon{
         height: 2rem;
@@ -41,19 +37,18 @@
         width: 100%;
         @include tablet{
             display: flex;
-            // align-items: center;
             gap: 1rem;
         }
     }
     &__items{
         width: 100%;
         display: flex;
-        // flex-wrap: wrap;
-        // border-radius: 5px;
+        margin: 1rem 0;
         justify-content: center;
         @include tablet{
             flex-direction: row;
             justify-content: right;
+            margin: auto;
         }
 
     }
@@ -61,6 +56,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 10%;
+        @include tablet{
+            width: auto;
+        }
 
     }
     &__mobileProfileImg, &__tabletProfileImg{
@@ -82,11 +81,11 @@
     &__searchStyling{
         display: flex;
         flex-wrap: nowrap;
-        // justify-content: flex-start;
         align-items: center;
         border:2px solid #e1e1e1;
         border-radius: 4px;
-        width: 80%;
+        width: 90%;
+        padding: 0.5rem 1rem;
         @include tablet{
             width: auto;
         }
@@ -100,28 +99,12 @@
     }
     &__uploadBtn{
         @extend .addComment__btn;
-        width: 90%;
+        width: 100%;
         @include tablet{
             width: auto;
         }
-        // display: block;
-        
-        // background-color: #0095ff;
-        // border-style: none;
-        // color: #fff;
-        // border-radius: 5px;
-        // padding: 1rem 3rem;
-        // position: relative;
-        // gap: 50px;
-        // &:hover{
-        //     background-color: #0065ad;
-        // }
     }
     &__uploadIcon{
         @extend .addComment__btnIcon;
-        // position: absolute;
-        // left: 0.5rem;
-        // height: 1.27rem;
-        
     }
 }
