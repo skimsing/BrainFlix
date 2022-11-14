@@ -1,7 +1,10 @@
 import publishIcon from '../assets/images/Icons/publish.svg';
 import vidThumbnail from "../assets/images/Images/Upload-video-preview.jpg"
+import {useNavigate} from  'react-router-dom';
 
 export default function Upload(props){
+    const navigate = useNavigate();
+
     return(
         <div className="upload">
 
@@ -27,7 +30,14 @@ export default function Upload(props){
                     </div>
 
                     <div className='upload__formButtons'>
-                        <button className='upload__publishBtn'>
+                        <button onClick={(e) =>
+                                {e.preventDefault();
+                                alert("thanks for upload");
+                                navigate("/")}
+                                
+                            } 
+                            
+                            className='upload__publishBtn'>
                             <img className="upload__publishBtnIcon" src={publishIcon}></img>
                             Publish
                         </button>

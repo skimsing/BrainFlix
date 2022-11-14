@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import {useParams} from "react-router-dom";
 
 function NextVideo(props){
 
@@ -8,9 +7,7 @@ function NextVideo(props){
             <p className="nextVideo__header">Next Videos</p>
 
         {props.videos.map((e) => {
-            // if(e.id === props.currentVidId){
-            //     return <> </>;
-            // }
+     
             return(
                 <Link to={`/videos/${e.id}`} key={e.id}>
                     <div className="nextVideo__vidContainer">
@@ -22,8 +19,7 @@ function NextVideo(props){
                     </div>
                 </Link>
             );
-        })
-        }
+        })}
            
         </div>
     );
