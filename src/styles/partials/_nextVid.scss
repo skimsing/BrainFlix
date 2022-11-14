@@ -1,0 +1,32 @@
+@use './mixins' as *;
+@use './fonts' as *;
+
+.nextVideo{
+    @include tablet{
+        padding: 1rem;
+        width: 60%;
+    }
+    &__header{
+        margin: 1rem;
+        text-transform: uppercase;
+        color: #e1e1e1;
+        font-weight: 700;
+    }
+    &__vidContainer{
+        display: flex;
+        margin: 1rem;
+    }
+    &__vidThumb{
+        border-radius: 4px;
+        width: 30%;
+        height: 15vh;
+        object-fit: cover;
+        
+    }
+    &__vidLabel{
+        margin: 1rem;
+    }
+    &__vidTitle{
+        font-weight: 700;
+    }
+}

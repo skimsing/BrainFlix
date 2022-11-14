@@ -47,7 +47,7 @@ function VidAndCom(props){
                         <img className="addComment__icon" src={iconImg} alt="headIcon"></img>
                         
                         <form className="addComment__form">  
-                                <label className="addComment__commentLabel" for="commentText">Join the conversation</label>
+                                <label className="addComment__commentLabel" htmlFor="commentText">Join the conversation</label>
                             <div className='addComment__commentWrapper'>
                                 <textarea className="addComment__commentBox" name="commentText" id="commentText" placeholder="Add a new comment"></textarea>
                                 <button className="addComment__btn" type="submit" name="btn">
@@ -59,9 +59,10 @@ function VidAndCom(props){
                     </div>
                 </div>
 
-                {props.video.comments.map(comment=>{
-                    return <NewComment comment={comment} />
+              {props.video.comments.map(comment=>{
+                    return <NewComment comment={comment} key={comment.id} />
                 })}
+
             </div>
         </div>
 

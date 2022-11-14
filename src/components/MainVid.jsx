@@ -1,6 +1,6 @@
-import viewsIcon from '../assets/images/Icons/views.svg';
-import likesIcon from '../assets/images/Icons/likes.svg';
-import formatDate from '../helpers/formatDate';
+// import viewsIcon from '../assets/images/Icons/views.svg';
+// import likesIcon from '../assets/images/Icons/likes.svg';
+// import formatDate from '../helpers/formatDate';
 
 function MainVid(props){
 
@@ -8,7 +8,7 @@ function MainVid(props){
 
         <div className="video">
             <div className="video__nowPlaying">
-                <video className="video__vidPoster" poster={props.video.image} controls></video>
+                <video className="video__vidPoster" poster={props.video} controls></video>
             </div>
 
             {/* <div className="video__infoContainer">
