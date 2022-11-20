@@ -18,11 +18,12 @@ export default function Home(){
     useEffect(() =>{
         const loadVideos = async () => {
             try {
-                const response = await axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`);
+                // const response = await axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`);
+                const response = await axios.get(`http://localhost:8080/videos`);
                 setNextVids(response.data);
         
                 const vidId = id ? id : response.data[0].id;
-                const vidDetails = await axios.get(`https://project-2-api.herokuapp.com/videos/${vidId}?api_key=${apiKey}`);
+                const vidDetails = await axios.get(`http://localhost:8080/videos/${vidId}?api_key=${apiKey}`);
                 setVideo(vidDetails.data);
             
             } catch (error) {
@@ -32,20 +33,20 @@ export default function Home(){
        
         loadVideos()
     },[]); 
-        
+      
+    const fetchVid = async (id) => {
+        try {
+            if(id) {
+                const vidResponse = await axios.get(`http://localhost:8080/videos/${id}/?api_key=${apiKey}`)
+                setVideo(vidResponse.data);
+            }
+        } catch (error) {
+            console.error("can't get vid by id", error);
+        }
+    }
 
     useEffect(()=>{
-        const fetchVid = async () => {
-            try {
-                const vidResponse = await axios.get(`https://project-2-api.herokuapp.com/videos/${id}/?api_key=${apiKey}`)
-                setVideo(vidResponse.data);
-                
-            } catch (error) {
-                console.error("can't get vid by id", error);
-            }
-        }
-                
-        fetchVid();     
+        fetchVid(id);     
     }, [id]);
     
     return(
