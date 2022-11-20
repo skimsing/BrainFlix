@@ -54,7 +54,7 @@ export default function Home(){
             {video && <MainVid videoData={video} apiKey={apiKey}/>}
             <div className="app__desktopDisplay">
                 {video && <VidAndComments video={video}/>}
-                <NextVideo videos={nextVids}/>
+                <NextVideo videos={nextVids} currentVideo={id}/>
             </div>
         </>
     )
