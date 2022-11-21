@@ -1,26 +1,28 @@
 import {Link} from 'react-router-dom';
 
-function NextVideo({videos}){
+function NextVideo({videos, currentVideo}){
 
+    const filteredVideos = videos.filter(nowPlaying => nowPlaying.id !== currentVideo);
+    
     return(
         <div className="nextVideo">
             <p className="nextVideo__header">Next Videos</p>
 
-        {videos.map((e) => {
-     
-            return(
-                <Link className='nextVideo__vidLinks' to={`/videos/${e.id}`} key={e.id}>
-                    <div className="nextVideo__vidContainer">
-                        <img className="nextVideo__vidThumb" src={e.image}></img>
-                        <div className="nextVideo__vidLabel">
-                            <p className="nextVideo__vidTitle">{e.title}</p>
-                            <p className="nextVideo__vidChannel">{e.channel}</p>
-                        </div>
-                    </div>
-                </Link>
-            );
-        })}
-           
+            {filteredVideos.map(element => {
+                    return(
+                        <Link className='nextVideo__vidLinks' to={`/videos/${element.id}`} key={element.id}>
+                            <div className="nextVideo__vidContainer">
+                                <img className="nextVideo__vidThumb" src={element.image}></img>
+                                <div className="nextVideo__vidLabel">
+                                    <p className="nextVideo__vidTitle">{element.title}</p>
+                                    <p className="nextVideo__vidChannel">{element.channel}</p>
+                                </div>
+                            </div>
+                        </Link>
+                    );
+                })
+            }
+            
         </div>
     );
 }

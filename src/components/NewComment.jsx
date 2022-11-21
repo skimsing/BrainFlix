@@ -1,15 +1,18 @@
 import formatDate from "../helpers/formatDate";
 
-function NewComment(props){
+function NewComment({commentData}){
+
+    const {name, timestamp, comment} = commentData;
+
     return(
       <div className="comment__displayed">
         <div className="comment__icon"></div>
         <div className="comment__details">
             <div className="comment__label">
-                <div className="comment__name">{props.comment.name}</div>
-                <div className="comment__date">{formatDate(props.comment.timestamp)}</div>
+                <div className="comment__name">{name}</div>
+                <div className="comment__date">{formatDate(timestamp)}</div>
             </div>
-            <div className="comment__text">{props.comment.comment}</div>
+            <div className="comment__text">{comment}</div>
         </div>
     </div>
     );
