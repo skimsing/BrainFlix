@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 function NextVideo({videos, currentVideo}){
 
-    const filteredVideos = videos.filter(nowPlaying => {return nowPlaying.id !== currentVideo});
+    const filteredVideos = videos.filter(nowPlaying => nowPlaying.id !== currentVideo);
     
     return(
         <div className="nextVideo">
