@@ -66,7 +66,7 @@ function VidAndCom({video}){
                 </div>
 
               {comments.map(commentData=>{
-                    return <NewComment comment={commentData} key={commentData.id} />
+                    return <NewComment commentData={commentData} key={commentData.id} />
                 })}
 
             </div>
